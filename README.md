@@ -27,7 +27,7 @@ Ensure you have `Node.js` and `npm` installed on your machine.
 1. **Clone the repository:**
 
    ```bash
-   git clone <(https://github.com/vdabral/Fetching-API-Data-with-Redux)>
+   git clone https://github.com/vdabral/Fetching-API-Data-with-Redux
    ```
 
 2. **Navigate to the project directory:**
