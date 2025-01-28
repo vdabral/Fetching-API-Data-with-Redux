@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Redux Fetch Posts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+A simple React application that fetches posts from `https://jsonplaceholder.typicode.com/posts` using Redux for state management. The application demonstrates the use of Redux for handling API requests, loading, and error states in a React app.
 
-## Available Scripts
+## Features
+- Fetches posts from a public API (`jsonplaceholder.typicode.com/posts`).
+- Displays the list of posts with the title and body.
+- Handles loading state with a `"Loading..."` message while data is being fetched.
+- Displays error messages if the fetch request fails.
+- Uses Redux for managing API data, loading, and error states.
 
-In the project directory, you can run:
+## Technologies Used
+- React
+- Redux
+- Redux Thunk
+- JavaScript
+- CSS (for basic styling)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites:
+Ensure you have `Node.js` and `npm` installed on your machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Steps to Run the Project Locally:
 
-### `npm test`
+1. **Clone the repository:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone <(https://github.com/vdabral/Fetching-API-Data-with-Redux)>
+   ```
 
-### `npm run build`
+2. **Navigate to the project directory:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd redux-fetch-posts
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Install dependencies:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Install all the required dependencies using npm:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Start the development server:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Run the app using:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   This will start the app and you can access it at `http://localhost:3000`.
 
-## Learn More
+## Usage
+- The app will display `"Loading..."` while the posts are being fetched.
+- Once the posts are successfully fetched, they will be displayed with their titles and bodies.
+- If the API fetch fails, an error message will be displayed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## File Structure
+```
+src/
+├── components/
+│   ├── PostList.jsx         # Component for displaying posts
+├── redux/
+│   ├── actionTypes.js       # Action types for Redux actions
+│   ├── actions.js           # Action creators to handle API requests
+│   ├── reducer.js           # Reducer for managing posts state
+│   └── store.js             # Redux store setup
+├── App.js                   # Main App component
+├── index.js                 # Entry point for the application
+└── index.css                # Basic styles for the application
+```
